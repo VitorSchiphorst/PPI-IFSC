@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+</head>
+<body>
+    <h1>The map and area elements</h1> <!-- Criação de um Título com o "<h1>" -->
+
+    <img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379"> <!-- Imagem utilizada com tag #workmap, e altura e largura costumizados  -->
+
+    <map name="workmap"> <!-- Utilização da tag workmap para referenciar a imagem-->
+        <area shape="rect" coords="34, 44, 270, 350" href="Computer" alt="computer.htm"> <!-- Informa que em uma área nas Coordenadas descritas tem um Link, que ao clicar enviar à outra página -->
+        <area shape="rect" coords="290, 172, 333, 250" href="Phone" alt="phone.htm"> <!-- Informa que em uma área nas Coordenadas descritas tem um Link, que ao clicar enviar à outra página -->
+        <area shape="circle" coords="337, 300, 44" href="Cup of coffee" alt="coffee.htm"> <!-- Informa que em uma área nas Coordenadas descritas tem um Link, que ao clicar enviar à outra página -->
+    </map> <!-- Fechamento da Tag MAP -->
+    <!-- REFERÊNCIAS UTILIZADAS = https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/map -->
+                            <!-- https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/area -->
+</body>
+</html>

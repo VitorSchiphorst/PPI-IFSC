@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="forms.html" method="post">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+        <label for="txtNome">Nome:</label>
+        <input type="text" name="name" id="txtNome">
+        <br>
+        <label for="txtEmail">Email:</label>
+        <input type="email" name="email" id="txtEmail" pattern=".+@gmail\.com" required>
+        <br>
+        <label for="pass">Password (8 Caracteres min):</label>
+        <input type="password" name="password" id="pass" minlength="8" required>
+        <br>
+        <label for="txtButton">Botão:</label>
+        <input type="button" value="Teste Botão">
+        <br>
+        <label for="txtCheckbox">Checkbox:</label>
+        <input type="checkbox"> Checkbox
+        <br>
+        <label for="txtRadio">Radio:</label>
+        <input type="radio"> Radio
+        <br>
+        <label for="txtDate">Data:</label>
+        <input type="date"> 
+        <br>
+        <label for="txtDate-local">Data com Hora:</label>
+        <input type="datetime-local">
+        <br>
+        <label for="txtFile">Arquivo:</label>
+        <input type="file">
+        <br>
+        <label for="txtImage">Image:</label>
+        <input type="image">
+        <br>
+        <label for="txtTentacles">Números de Tentáculos(10-100)</label>
+        <input type="number" id="txtTentacles" name="tentacles" min="10" max="100">
+        <br>
+        <label for="txtAudio">Audio Settings:</label>
+        <input type="range" id="txtAudio" name="volume" min="0" max="10">
+        <br>
+        <label for="txtSearch">Search:</label>
+        <input type="search" id="txtSearch" name="search">
+        <br>
+        <label for="txtPhone">Telefone:</label>
+        <input type="tel" id="txtPhone" name="phone" required pattern="\(\d{2}\) \d(4)-|d{4}">
+        <br>
+        <label for="txtURL">URL:</label>
+        <input type="url" id="txtURL" name="Url" placeholder="https://" pattern="https://.*" required>
+        <br>
+        <label for="txtWeek">Week:</label>
+        <input type="week" name="week" id="txtWeek" required>
+        <br>
+        <label for="txtList">Lista de Browser:</label>
+        <input list="browsers">
+        <datalist id="browsers">
+            <option value="Chrome"></option>
+            <option value="Firefox"></option>
+            <option value="Internet Explorer"></option>
+            <option value="Opera"></option>
+            <option value="Safari"></option>
+        </datalist>
+        </fieldset>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02</title>
+</head>
+<body>
+    <form action="">
+        <label for="txtNome">Nome:</label>
+        <input type="text" name="name" id="txtNome">
+        <br>
+        <sup>Serve para Informar o Nome do Usuário</sup>
+        <br>
+        <label for="txtEmail">Email:</label>
+        <input type="email" name="email" id="txtEmail" pattern=".+@gmail\.com" required>
+        <br>
+        <sup>Serve para Informar o Email do Usuário, contendo validação de "@gmail.com"</sup>
+        <br>
+        <label for="pass">Password (8 Caracteres min):</label>
+        <input type="password" name="password" id="pass" minlength="8" required>
+        <br>
+        <sup>Serve para Informar a Senha do Usuário, ou seja, os Carácteres são alterados por "Bolinhas" para não ser visualizado a Senha</sup>
+        <br>
+        <label for="txtButton">Botão:</label>
+        <input type="button" value="Teste Botão">
+        <br>
+        <sup>É um Botão que pode ser usado com outras finalinalidades, mas necessita de outro código</sup>
+        <br>
+        <label for="txtCheckbox">Checkbox:</label>
+        <input type="checkbox"> Checkbox
+        <br>
+        <sup>Serve para Selecionar a "Caixinha" que será Selecionada, podendo conter diversas caixinhas para a Seleção</sup>
+        <br>
+        <label for="txtRadio">Radio:</label>
+        <input type="radio"> Radio
+        <br>
+        <sup>Serve para Selecionar a "Caixinha" que será Selecionada, mas só pode conter uma única marcação</sup>
+        <br>
+        <label for="txtDate">Data:</label>
+        <input type="date"> 
+        <br>
+        <sup>Serve para Informar a Data com Dia, Mês e Ano</sup>
+        <br>
+        <label for="txtDate-local">Data com Hora:</label>
+        <input type="datetime-local">
+        <br>
+        <sup>Serve para Informar a Data e o Horário</sup>
+        <br>
+        <label for="txtFile">Arquivo:</label>
+        <input type="file">
+        <br>
+        <sup>Serve para Enviar um Arquivo</sup>
+        <br>
+        <label for="txtImage">Image:</label>
+        <input type="image">
+        <br>
+        <sup>Serve para Enviar uma Imagem</sup>
+        <br>
+        <label for="txtTentacles">Números de Tentáculos(10-100)</label>
+        <input type="number" id="txtTentacles" name="tentacles" min="10" max="100">
+        <br>
+        <sup>Serve para Informar um número, mas com limitadores entre 10 e 100</sup>
+        <br>
+    </form>
+</body>
+</html>
