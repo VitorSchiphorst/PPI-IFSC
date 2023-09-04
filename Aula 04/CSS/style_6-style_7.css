@@ -1,0 +1,27 @@
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: grid;
+}
+
+h1 {
+    margin: 0;
+    padding: 5.51%;
+}
+
+.um {
+    background-color: purple;
+}
+
+.dois {
+    background-color: green;
+}
+
+.tres {
+    background-color: red;
+}
+
+.quatro {
+    background-color: yellow;
+}

@@ -1,0 +1,105 @@
+body {
+  background-color: #0078bd;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 100vh;
+  margin: 0;
+  animation: fogueteVoando 5s ease-in-out forwards;
+}
+
+.foguete {
+  width: 20px;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid #4e4e4e;
+}
+
+.fogo1 {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  transform: translateX(-50%);
+  bottom: -2%;
+  left: 50%;
+  background-color: rgb(184, 111, 1);
+  z-index: -1;
+  border-radius: 20%;
+  animation: fogo1 300ms ease-in-out infinite;
+}
+
+.fogo2 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  transform: translateX(-50%);
+  bottom: 0;
+  left: 50%;
+  background-color: rgb(184, 38, 1);
+  z-index: -1;
+  border-radius: 20%;
+  animation: fogo2 500ms ease-in-out infinite;
+}
+
+.corpo-foguete {
+  width: 60px;
+  height: 150px;
+  background-color: #838383;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.window {
+  width: 20px;
+  height: 20px;
+  background-color: #000000;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+@keyframes fogueteVoando {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-80%);
+    background-color: #000105;
+  }
+}
+
+@keyframes fogo1 {
+  0% {
+    position: absolute;
+    left: 49%;
+    transform: translateY(0%);
+  }
+
+  100% {
+    position: absolute;
+    left: 49%;
+    transform: translateY(30%);
+  }
+}
+
+@keyframes fogo2 {
+  0% {
+    position: absolute;
+    left: 48.8%;
+    transform: translateY(0%);
+  }
+
+  100% {
+    position: absolute;
+    left: 48.8%;
+    transform: translateY(40%);
+  }
+}

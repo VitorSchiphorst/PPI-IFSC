@@ -1,0 +1,12 @@
+/*<!-- Uma Regra CSS define um ou vários elementos do documento HTML, servindo para estilizar, alinhar, redimensionar, etc. -->
+    <!-- A Sintaxe é definida por um Seletor que pode ser por uma Classe ".Seletor" (é definido por um . no inicio da classe) ou por ID "#Seletor" (é definido por um # o inicio da classe) após isso é aberto as Chaves {} e dentro dela é defino os atributos. Exemplo abaixo: -->*/
+
+.cor-roxa {
+    color: purple;
+}
+
+#cor-roxa {
+    color:purple;
+}
+
+/* Podemos incorporar o CSS em nosso HTML colocando <link rel="stylesheet" type="text/css" href="nomedosarquivocss.css"> para assim lickar o CSS com o HTML ou tbm usar o <style></style>, mas é uma ma prática definir a estilização no próprio HTML*/

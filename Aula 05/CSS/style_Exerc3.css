@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.geral {
+    display: flex;
+}
+
+.sec2 {
+    margin-left: 30%;
+}
+
+.sec2 h2 {
+    text-align: center;
+    margin-left: 5%;
+}
+
+.sec2 ul {
+    margin-left: 5%;
+}
+
+.sec2 .row {
+    margin-left: 5%;
+}
+
+.info-links div {
+    text-align: start;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.info-links img {
+    margin-right: 2%;
+}
+
+.head_write {
+    position: fixed;
+    text-align: center;
+    color: white;
+    background-color: black;
+    height: 100%;
+    width: 20%;
+}
+
+.perfil {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+}
+
+.info-links {
+    font-weight: 500;
+    position: relative;
+    height: 35px;
+    text-align: center;
+}
+
+.info-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 5%;
+}
+
+.info-links span {
+    padding-left: 5%;
+}
+
+.info-links img {
+    position: relative;
+    top: 10%;
+    height: 22px;
+    width: 22px;
+    padding-right: 3px;
+}
+
+li {
+    list-style: none;
+    font-size: 12px;
+    margin-left: 1%;
+    font-weight: 400;
+    margin-bottom: 1%;
+}
+
+.space {
+    margin-bottom: 4%;
+}
+
+.row {
+    background-color: black;
+    border: none;
+    height: 2px;
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.row-white {
+    background-color: white;
+    border: none;
+    height: 2px;
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.write-italic {
+    font-weight: 500;
+    font-size: 14px;
+    font-style: italic;
+}
+
+li a {
+    color: black;
+    text-decoration: none;
+}
+
+li a img {
+    height: 10px;
+}
+
+.write-left {
+    margin-right: 1%;
+    text-align: right;
+}
+
+.columns {
+    column-count: 2;
+}
+
+.columns li {
+    margin-bottom: 5%;
+    margin-left: 5%;
+    font-weight: 400;
+    font-size: 14px;
+    list-style: disc;
+}
+
+.columns-none-style {
+    margin-left: 1%;
+    column-count: 2;
+}
+
+.none-style li {
+    list-style: disc;
+    margin-left: 3%;
+    font-size: 14px;
+    font: 500;
+    margin-bottom: 3%;
+}
