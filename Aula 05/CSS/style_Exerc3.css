@@ -11,12 +11,12 @@
 }
 
 .sec2 {
-    margin-left: 30%;
+    margin-left: 23%;
 }
 
 .sec2 h2 {
     text-align: center;
-    margin-left: 5%;
+    margin-left: 10%;
 }
 
 .sec2 ul {
@@ -30,7 +30,6 @@
 .info-links div {
     text-align: start;
     margin-top: 5%;
-    margin-left: 5%;
 }
 
 .info-links img {
@@ -43,7 +42,7 @@
     color: white;
     background-color: black;
     height: 100%;
-    width: 20%;
+    width: 24%;
 }
 
 .perfil {
@@ -85,6 +84,10 @@ li {
     margin-bottom: 1%;
 }
 
+.transition {
+    transition: 0.25s ease-in-out;
+}
+
 .space {
     margin-bottom: 4%;
 }
@@ -93,9 +96,11 @@ li {
     background-color: black;
     border: none;
     height: 2px;
-    width: 100%;
+    width: 95%;
     margin-top: 1%;
     margin-bottom: 1%;
+    animation: row 3s forwards;
+    transform: scaleX(0);
 }
 
 .row-white {
@@ -105,6 +110,7 @@ li {
     width: 100%;
     margin-top: 1%;
     margin-bottom: 1%;
+    animation: row-white 3s forwards;
 }
 
 .write-italic {
@@ -150,4 +156,30 @@ li a img {
     font-size: 14px;
     font: 500;
     margin-bottom: 3%;
+}
+
+.transition:hover {
+    transform: scale(1.1) translate(8%);
+}
+
+@keyframes row-white {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes row {
+    0% {
+        transform: scaleX(0);
+        transform-origin: center;
+    }
+
+    100% {
+        transform: scaleX(1);
+        transform-origin: left right;
+    }
 }
