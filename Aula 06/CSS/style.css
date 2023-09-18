@@ -1,0 +1,15 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+#box {
+    border: 1px solid gray;
+    text-align: center;
+    font-size: 30pt;
+    font-weight: bold;
+    box-shadow: 5px 5px 5px;
+    transition: all 1s ease-in-out;
+    border-radius: 25%;
+    margin: 5%;
+}

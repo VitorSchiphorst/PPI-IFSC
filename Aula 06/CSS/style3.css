@@ -1,0 +1,24 @@
+body {
+    text-align: center;
+}
+
+table, th, td, tr {
+    border:  1px solid black;
+    border-collapse: collapse;
+}
+
+tfoot {
+    background-color: lightgray;
+}
+
+thead {
+    font-weight: bold;
+}
+
+tbody tr:nth-child(2n+1) {
+    background-color: burlywood;
+}
+
+tbody tr:nth-child(2n) {
+    background-color: aqua;
+}
