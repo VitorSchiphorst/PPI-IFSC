@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    margin-bottom: 2%;
+}
+
+button {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100px;
+    height: 50px;
+    border-radius: 25%;
+    border: 2px solid gray;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: white;
+    transition: 0.3s ease-in-out;
+    background-color: rgb(1, green, blue);
+}
+
+button:hover {
+    transform: scale(1.2);
+    animation: 1s colors linear infinite;
+}
+
+@keyframes colors {
+    0% {
+        background: green;
+        color: white;
+    }
+    25% {
+        background: blue;
+        color: white;
+    }
+    50% {
+        background: purple;
+        color: white;
+    }
+    75% {
+        background: black;
+        color: white;
+    }
+    100% {
+        background: white;
+        color: black;
+    }
+}
