@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    gap: 2%;
+    height: 80vh;
+    justify-content: space-around;
+    margin: 2%;
+}
+
+.directionColumn {
+    flex-direction: column;
+    display: flex;
+}
+
+.directionRow {
+    flex-direction: row;
+    display: flex;
+}
+
+.bandeira {
+    border: 1px solid black;
+    height: 250px;
+    width: 550px;
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.japan {
+    background: red;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+.redH {
+    background: red;
+    height: 33.5%;
+    width: 100%;
+}
+
+.blueH {
+    background: blue;
+    height: 33%;
+    width: 100%;
+}
+
+.whiteH {
+    background: white;
+    height: 33.5%;
+    width: 100%;
+}
+
+.greenI {
+    background: green;
+    height: 100%;
+    width: 35%;
+}
+
+.redI {
+    background: red;
+    height: 100%;
+    width: 35%;
+}
+
+.whiteI {
+    background: white;
+    height: 100%;
+    width: 35%;
+}

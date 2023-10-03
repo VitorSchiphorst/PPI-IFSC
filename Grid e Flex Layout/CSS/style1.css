@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    height: 80vh;
+    flex-wrap: wrap;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.divs {
+    border: 2px solid lightgray;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    border-radius: 10%;
+    height: 30%;
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+}
+
+.P {
+    border: 2px solid lightgray;
+    margin: 1%;
+    border-radius: 10%;
+    height: 80%;
+    width: 30%;
+}
+
+.G {
+    border: 2px solid lightgray;
+    margin: 1%;
+    border-radius: 10%;
+    height: 80%;
+    width: 65%;
+}
+
+.Q {
+    border: 2px solid lightgray;
+    margin: 1%;
+    border-radius: 10%;
+    height: 80%;
+    width: 25%;
+}
+
+.C {
+    border:  solid lightgray;
+    border-top: 2px;
+    border-bottom: 2px;
+    margin: 1%;
+    height: 80%;
+    width: 50%;
+}
