@@ -1,0 +1,20 @@
+.container {
+    display: grid;
+    justify-content: center;
+}
+
+.boxCor {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    margin-bottom: 7%;
+    transition: 0.5s;
+}
+
+.labelCor {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 8%;
+    transition: 0.5s;
+}

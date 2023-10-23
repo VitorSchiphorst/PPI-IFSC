@@ -1,0 +1,10 @@
+.container {
+    display: grid;
+    justify-content: center;
+}
+
+#lista {
+    font-size: 34px;
+    width: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+}
