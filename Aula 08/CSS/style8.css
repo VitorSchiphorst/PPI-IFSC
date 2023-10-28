@@ -5,5 +5,12 @@
 
 .columns {
     display: flex;
-    columns: 2;
+    justify-content: center;
+    margin-top: 5%;
+    gap: 5%;
+    width: 100%;
+}
+
+.title {
+    text-align: center;
 }

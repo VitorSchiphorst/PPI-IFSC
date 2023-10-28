@@ -1,0 +1,142 @@
+body {
+    background-color: silver;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightblue;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    justify-content: center;
+}
+
+.calculadora {
+    display: grid;
+    grid-template-areas: "result result result result"
+                         "mais menos vezes dividir"
+                         "num7 num8 num9 igual"
+                         "num4 num5 num6 igual"
+                         "num1 num2 num3 igual"
+                         "num0 ponto C igual";
+    height: 500px;
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px 0px rgba(36, 36, 36, 0.15);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    overflow: hidden;
+}
+
+.estilizar {
+    border: none;
+    font-size: 40px;
+    background-color: transparent;
+    border: 1px solid rgb(175, 175, 175);
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5) inset;
+}
+
+.result {
+    grid-area: result;
+    background-color: rgb(37, 37, 37) !important;
+    color: white !important;
+    text-align: end;
+    padding-right: 5%;
+    height: 100%;
+}
+
+.num0 {
+    grid-area: num0;
+    background-color: white !important;
+}
+
+.num1 {
+    grid-area: num1;
+    background-color: white !important;
+}
+
+.num2 {
+    grid-area: num2;
+    background-color: white !important;
+}
+
+.num3 {
+    grid-area: num3;
+    background-color: white !important;
+}
+
+.num4 {
+    grid-area: num4;
+    background-color: white !important;
+}
+
+.num5 {
+    grid-area: num5;
+    background-color: white !important;
+}
+
+.num6 {
+    grid-area: num6;
+    background-color: white !important;
+}
+
+.num7 {
+    grid-area: num7;
+    background-color: white !important;
+}
+
+.num8 {
+    grid-area: num8;
+    background-color: white !important;
+}
+
+.num9 {
+    grid-area: num9;
+    background-color: white !important;
+}
+
+.ponto {
+    grid-area: ponto;
+    background-color: white!important;
+}
+
+.mais {
+    grid-area: mais;
+    background-color: lightgray !important;
+}
+
+.menos {
+    grid-area: menos;
+    background-color: lightgray !important;
+}
+
+.dividir {
+    grid-area: dividir;
+    background-color: lightgray !important;
+}
+
+.C {
+    grid-area: C;
+    background-color: white !important;
+}
+
+.vezes {
+    grid-area: vezes;
+    background-color: lightgray !important;
+}
+
+.igual {
+    grid-area: igual;
+    height: 100%;
+    background-color: orange !important;
+}
