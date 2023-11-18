@@ -42,11 +42,43 @@
         }
 
         public function update(Pessoa $pessoa) {
-            
+            $dao = new Database();
+            $conn = $dao->getConnection();
+
+            $sql = 'UPDATE usr SET nome = :nome, email = :email, senha = :senha WHERE id = :id';
+            $stmt = $conn->prepare($sql);
+
+            $stmt->bindValue(':nome', $pessoa->getNome());
+            $stmt->bindValue(':email', $pessoa->getEmail());
+            $stmt->bindValue(':senha', $pessoa->getSenha());
+            $stmt->bindValue(':id', $pessoa->getId());
+            return $stmt->execute();
         }
 
         public function delete(Pessoa $pessoa) {
-            
+            $dao = new Database();
+            $conn = $dao->getConnection();
+
+            $sql = "DELETE FROM usr WHERE id = ?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bindValue(1, $id);
+            $stmt->execute();
+        }
+
+        public function selectID($id) {
+            $dao = new Database();
+            $conn = $dao->getConnection(); 
+
+            $sql = "SELECT * FROM usr WHERE id = ?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bindValue(1, $id);
+            $stmt->execute();
+            if($stmt->rowCount() > 0){
+                $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+                return $resultado;
+            }else{
+                return [];
+            }
         }
     }
 ?>

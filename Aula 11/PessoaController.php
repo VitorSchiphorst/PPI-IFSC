@@ -25,19 +25,27 @@ class PessoaController {
         }
 
         public function editarPessoa($id) {
-
+            $pessoa = new Pessoa();
+            $pessoa->setAll($id, $nome, $email, $senha);
+            $pessoaDAO = new PessoaDAO();
+            $pessoaDAO->update($pessoa);
         }
 
         public function excluirPessoa($id) {
-
+            $pessoaDAO = new PessoaDAO();
+            $pessoaDAO->delete($id);
         }
 
         public function getPessoa($id) {
-
+            $pessoaDAO = new PessoaDAO();
+            $pessoa = $pessoaDAO->search($id);
+            return $pessoa;
         }
 
         public function autenticarPessoa($email, $senha) {
-
+            $pessoaDAO = new PessoaDAO();
+            $pessoa = $pessoaDAO->autenticar($email, $senha);
+            return $pessoa;
         }
     }
 ?>
