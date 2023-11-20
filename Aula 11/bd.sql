@@ -6,5 +6,7 @@ CREATE TABLE usuarios (
     id INT(11) PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    senha VARCHAR(32) NOT NULL -- NINGUÉM FAZ ISSO OK? NÃO USE MD5 TB OK?
+    senha VARCHAR(32) NOT NULL,
+    nascimento DATE NOT NULL,
+    telefone VARCHAR(32) NOT NULL
 );

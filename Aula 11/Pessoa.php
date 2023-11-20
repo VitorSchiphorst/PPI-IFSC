@@ -4,11 +4,24 @@
         public $nome;
         public $email;
         public $senha;
+        public $nascimento;
+        public $telefone;
 
-        public function setAll($nome, $email, $senha) {
+        public function setAll($id, $nome, $email, $senha, $nascimento, $telefone) {
+            $this-> id = $id;
             $this-> nome = $nome;
             $this-> email = $email;
             $this-> senha = $senha;
+            $this-> nascimento = $nascimento;
+            $this-> telefone = $telefone;
+        }
+
+        public function setAllNoID($nome, $email, $senha, $nascimento, $telefone) {
+            $this-> nome = $nome;
+            $this-> email = $email;
+            $this-> senha = $senha;
+            $this-> nascimento = $nascimento;
+            $this-> telefone = $telefone;
         }
 
         public function getID() {
@@ -25,6 +38,14 @@
 
         public function getSenha() {
             return $this-> senha;
+        }
+
+        public function getNascimento() {
+            return $this-> nascimento;
+        }
+
+        public function getTelefone() {
+            return $this-> telefone;
         }
 
         

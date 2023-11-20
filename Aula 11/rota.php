@@ -2,50 +2,67 @@
     include_once "Pessoa.php";
     include_once "PessoaController.php";
 
-    if(!isset($_POST['op'])) {
-        header('Location: index.php');
-        exit();
-    }
-
     $op = $_POST['op'];
 
     switch ($op) {
         case 'cadastrar_usuario':
+            if(!isset($_POST['nome']) || !isset($_POST['email']) || !isset($_POST['senha']) || !isset($_POST['id']) || !isset($_POST['nascimento']) || !isset($_POST['telefone'])){
+                echo("Erro ao Cadastrar");
+                exit();
+            }
+
             $nome = $_POST['nome'];
+            $email = $_POST['email'];
+            $senha = $_POST['senha'];
+            $nascimento = $_POST['nascimento'];
+            $telefone = $_POST['telefone'];
+
+            $pessoaController = new PessoaController();
+            $resultado = $pessoaController-> cadastrarUsuario($nome, $email, $senha, $nascimento, $telefone);
+            header("Location:index.php");
+            break;
+        
+        case 'atualizar_usuario':
+            if(!isset($_POST['nome']) || !isset($_POST['email']) || !isset($_POST['senha']) || !isset($_POST['id']) || !isset($_POST['nascimento']) || !isset($_POST['telefone'])){
+                echo("Erro ao Atualizar");
+                exit();
+            }
+
+            $id = $_POST['id'];
+            $nome = $_POST['nome'];
+            $email = $_POST['email'];
+            $senha = $_POST['senha'];
+            $nascimento = $_POST['nascimento'];
+            $telefone = $_POST['telefone'];
+
+            $pessoaController = new PessoaController();
+            $pessoaController-> editarUsuario($id ,$nome, $email, $senha, $nascimento, $telefone);
+            break;
+
+        case 'excluir_usuario':
+            if(!isset($_POST['id'])){
+                echo("Erro ao excluir");
+                exit();
+            }
+                
+            $id = $_POST['id'];
+
+            $pessoaController = new PessoaController();
+            $pessoaController->excluirUsuario($id);
+            break;
+
+        case 'login_usuario':
+            if(!isset($_POST['email']) || !isset($_POST['senha'])){
+                echo("Erro ao fazer Login");
+                exit();
+            }
+
             $email = $_POST['email'];
             $senha = $_POST['senha'];
 
             $pessoaController = new PessoaController();
-            $resultado = $pessoaController-> cadastrarPessoa($nome, $email, $senha);
-            echo $resultado;
+            $pessoaController->loginUsuario($email, $senha);
             break;
-        
-            case 'atualizar_user':
-                if(!isset($_POST['nome']) || !isset($_POST['email']) || !isset($_POST['senha']) || !isset($_POST['id'])){
-                    echo("Erro ao atualizar");
-                    exit();
-                }
-
-                $id = $_POST['id'];
-                $nome = $_POST['nome'];
-                $email = $_POST['email'];
-                $senha = $_POST['senha'];
-                $pessoaController = new PessoaController();
-                $pessoaController-> editarPessoa($id ,$nome, $email, $senha);
-     
-             break;
-
-            case 'excluir_user':
-                if(!isset($_POST['id'])){
-                    header('Location: index.php');
-                    echo("Erro ao excluir");
-                    exit();
-                }
-                
-                $id = $_POST['id'];
-                $pessoaController = new PessoaController();
-                $pessoaController->excluirPessoa($id);
-                break;
     
     }
 ?>

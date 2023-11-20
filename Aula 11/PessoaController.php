@@ -9,43 +9,36 @@ class PessoaController {
 
         }
 
-        public function cadastrarPessoa($nome, $email, $senha) {
+        public function cadastrarUsuario($nome, $email, $senha, $nascimento, $telefone) {
             $pessoa = new Pessoa();
             $pessoaDAO = new PessoaDAO();
-            $pessoa-> setAll($nome, $email, $senha);
+            $pessoa-> setAllNoID($nome, $email, $senha, $nascimento, $telefone);
 
             return $pessoaDAO-> insert($pessoa);
         }
 
-        public function listarPessoas() {
+        public function listarUsuario() {
             $pessoaDAO = new PessoaDAO();
             $pessoa = $pessoaDAO-> selectAll();
             
             return $pessoa;
         }
 
-        public function editarPessoa($id) {
+        public function editarUsuario($id, $nome, $email, $senha, $nascimento, $telefone) {
             $pessoa = new Pessoa();
-            $pessoa->setAll($id, $nome, $email, $senha);
+            $pessoa->setAll($id, $nome, $email, $senha, $nascimento, $telefone);
             $pessoaDAO = new PessoaDAO();
-            $pessoaDAO->update($pessoa);
+            $pessoaDAO-> update($pessoa);
         }
 
-        public function excluirPessoa($id) {
+        public function excluirUsuario($id) {
             $pessoaDAO = new PessoaDAO();
-            $pessoaDAO->delete($id);
+            $pessoaDAO-> delete($id);
         }
 
-        public function getPessoa($id) {
+        public function loginUsuario($email, $senha) {
             $pessoaDAO = new PessoaDAO();
-            $pessoa = $pessoaDAO->search($id);
-            return $pessoa;
-        }
-
-        public function autenticarPessoa($email, $senha) {
-            $pessoaDAO = new PessoaDAO();
-            $pessoa = $pessoaDAO->autenticar($email, $senha);
-            return $pessoa;
+            $pessoaDAO-> logar($email, $senha);
         }
     }
 ?>
