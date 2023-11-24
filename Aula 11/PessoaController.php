@@ -26,7 +26,7 @@ class PessoaController {
 
         public function editarUsuario($id, $nome, $email, $senha, $nascimento, $telefone) {
             $pessoa = new Pessoa();
-            $pessoa->setAll($id, $nome, $email, $senha, $nascimento, $telefone);
+            $pessoa-> setAll($id, $nome, $email, $senha, $nascimento, $telefone);
             $pessoaDAO = new PessoaDAO();
             $pessoaDAO-> update($pessoa);
         }
@@ -38,7 +38,7 @@ class PessoaController {
 
         public function loginUsuario($email, $senha) {
             $pessoaDAO = new PessoaDAO();
-            $pessoaDAO-> logar($email, $senha);
+            return $pessoaDAO-> logar($email, $senha);
         }
     }
 ?>

@@ -17,7 +17,7 @@
         <input type="password" name="senha" placeholder="Senha" class="inputCadastro">
         <input type="date" name="nascimento" class="inputCadastro">
         <input type="text" name="telefone" placeholder="Telefone" class="inputCadastro">
-        <input type="text" name="op" value="cadastrar_usuario" hidden>
+        <input type="text" name="op" value="cadastrar" hidden>
         <a href="index.php" class="linkLogin">Fazer Login</a>
         <button type="submit" value="Cadastrar" class="btnCadastro">Cadastrar</button>
     </form>

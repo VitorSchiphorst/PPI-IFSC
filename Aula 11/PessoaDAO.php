@@ -49,8 +49,8 @@
             $dao = new Database();
             $conn = $dao->getConnection();
 
-            $sql = "UPDATE usr SET nome = :nome, email = :email, senha = :senha, nascimento = :nascimento, telefone = :telefone  WHERE id = :id";
-            $stmt = $conn->prepare($sql);
+            $sql = "UPDATE usuarios SET nome = :nome, email = :email, senha = :senha, nascimento = :nascimento, telefone = :telefone  WHERE id = :id";
+            $stmt = $conn-> prepare($sql);
 
             $id = $pessoa-> getID();
             $nome = $pessoa-> getNome();
@@ -66,30 +66,29 @@
             $stmt-> bindParam(':telefone', $telefone);
             $stmt-> bindParam(':id', $id);
 
-            return $stmt->execute();
+            return $stmt-> execute();
         }
 
-        public function delete(Pessoa $pessoa) {
+        public function delete($id) {
             $dao = new Database();
             $conn = $dao->getConnection();
 
-            $sql = "DELETE FROM usr WHERE id = :id";
+            $sql = "DELETE FROM usuarios WHERE id = :id";
             $stmt = $conn->prepare($sql);
-            $id = $pessoa-> getID();
             
             $stmt-> bindParam(':id', $id);
-            $stmt->execute();
+            $stmt-> execute();
         }
 
         public function selectID($id) {
             $dao = new Database();
             $conn = $dao->getConnection(); 
 
-            $sql = "SELECT * FROM usr WHERE id = :id";
+            $sql = "SELECT * FROM usuarios WHERE id = :id";
             $stmt = $conn->prepare($sql);
 
             $stmt-> bindParam(':id', $id);
-            $stmt->execute();
+            $stmt-> execute();
 
             if($stmt->rowCount() > 0){
                 $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -103,12 +102,22 @@
             $dao = new Database();
             $conn = $dao->getConnection(); 
 
-            $sql = "SELECT * FROM usr WHERE email = :email, senha = :senha";
+            $sql = "SELECT * FROM usuarios WHERE email = :email AND senha = :senha";
             $stmt = $conn->prepare($sql);
 
             $stmt-> bindParam(':email', $email);            
             $stmt-> bindParam(':senha', $senha);
-            $stmt->execute();
+
+            $stmt-> execute();
+
+            if($stmt->rowCount() > 0){
+                $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+                header("Location:view_listagem_usuario.php");
+                exit();
+            }else{
+                header("Location: index.php?erroLogin=Credenciais+inválidas");
+                exit();
+            }
         }
     }
 ?>

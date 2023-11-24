@@ -31,38 +31,29 @@
             $pessoas = $pessoaController->listarUsuario();
 
             foreach ($pessoas as $pessoa) {
-                echo '<tr>';
-                echo '<td><input type="text" name="nome" class="inputListagem" value=' . $pessoa['nome'] . '></td>';
-                echo '<td><input type="text" name="email" class="inputListagem" value=' . $pessoa['email'] . '></td>';
-                echo '<td><input type="text" name="senha" class="inputListagem" value=' . $pessoa['senha'] . '></td>';
-                echo '<td><input type="date" name="senha" class="inputListagem" value=' . $pessoa['nascimento'] . '></td>';
-                echo '<td><input type="text" name="senha" class="inputListagem" value=' . $pessoa['telefone'] . '></td>';
-
-                echo '<td>
+                echo 
+                '<tr>
                     <form action="rota.php" method="post"> 
-                        <input type="text" name="op" value="atualizar_usuario" hidden>
-                        <input type="text" name="id" class="inputListagem" value="' . $pessoa['id'] . '" hidden>
-                        <input type="text" name="nome" class="inputListagem" value="' . $pessoa['nome'] . '" hidden>
-                        <input type="text" name="email" class="inputListagem" value="' . $pessoa['email'] . '" hidden>
-                        <input type="text" name="senha" class="inputListagem" value="' . $pessoa['senha'] . '" hidden>
-                        <input type="date" name="nascimento" class="inputListagem" value="' . $pessoa['nascimento'] . '" hidden>
-                        <input type="text" name="telefone" class="inputListagem" value="' . $pessoa['telefone'] . '" hidden>
-                        
-                        <button type="submit" value="Salvar" class="btnSalvar">Salvar</button>
-                    </form>
-                </td>';
-
-
-                echo '<td>
-                    <form action="rota.php" method="post"> 
-                        <input type="text" name="op" value="excluir_usuario" hidden>
+                        <input type="text" name="op" value="atualizar" hidden>
                         <input type="text" name="id" value="' . $pessoa['id'] . '" hidden>
-                        <button type="submit" value="Excluir" class="btnExcluir">Excluir</button>
+                        <td><input type="text" name="nome" class="inputListagem" value="' . $pessoa['nome'] . '" ></td>
+                        <td><input type="email" name="email" class="inputListagem" value="' . $pessoa['email'] . '" ></td>
+                        <td><input type="text" name="senha" class="inputListagem" value="' . $pessoa['senha'] . '" ></td>
+                        <td><input type="date" name="nascimento" class="inputListagem" value="' . $pessoa['nascimento'] . '" ></td>
+                        <td><input type="text" name="telefone" class="inputListagem" value="' . $pessoa['telefone'] . '" ></td>
+
+                        <td><input type="submit" value="Salvar" class="btnSalvar"></td>
                     </form>
-                </td>';
 
-
-                echo "</tr>";
+                    <td>
+                        <form action="rota.php" method="post"> 
+                            <input type="text" name="op" value="excluir" hidden>
+                            <input type="text" name="id" value="' . $pessoa['id'] . '" hidden>
+                        
+                            <input type="submit" value="Excluir" class="btnExcluir">
+                        </form>
+                    </td>
+                </tr>';
             }
             ?>
         </tbody>

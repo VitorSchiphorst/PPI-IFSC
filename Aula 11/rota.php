@@ -5,8 +5,8 @@
     $op = $_POST['op'];
 
     switch ($op) {
-        case 'cadastrar_usuario':
-            if(!isset($_POST['nome']) || !isset($_POST['email']) || !isset($_POST['senha']) || !isset($_POST['id']) || !isset($_POST['nascimento']) || !isset($_POST['telefone'])){
+        case 'cadastrar':
+            if(!isset($_POST['nome']) || !isset($_POST['email']) || !isset($_POST['senha']) || !isset($_POST['nascimento']) || !isset($_POST['telefone'])){
                 echo("Erro ao Cadastrar");
                 exit();
             }
@@ -19,11 +19,13 @@
 
             $pessoaController = new PessoaController();
             $resultado = $pessoaController-> cadastrarUsuario($nome, $email, $senha, $nascimento, $telefone);
+
             header("Location:index.php");
+
             break;
         
-        case 'atualizar_usuario':
-            if(!isset($_POST['nome']) || !isset($_POST['email']) || !isset($_POST['senha']) || !isset($_POST['id']) || !isset($_POST['nascimento']) || !isset($_POST['telefone'])){
+        case 'atualizar':
+            if(!isset($_POST['id']) || !isset($_POST['nome']) || !isset($_POST['email']) || !isset($_POST['senha']) || !isset($_POST['nascimento']) || !isset($_POST['telefone'])){
                 echo("Erro ao Atualizar");
                 exit();
             }
@@ -37,9 +39,12 @@
 
             $pessoaController = new PessoaController();
             $pessoaController-> editarUsuario($id ,$nome, $email, $senha, $nascimento, $telefone);
+
+            header("Location:view_listagem_usuario.php");
+
             break;
 
-        case 'excluir_usuario':
+        case 'excluir':
             if(!isset($_POST['id'])){
                 echo("Erro ao excluir");
                 exit();
@@ -48,10 +53,13 @@
             $id = $_POST['id'];
 
             $pessoaController = new PessoaController();
-            $pessoaController->excluirUsuario($id);
+            $pessoaController-> excluirUsuario($id);
+
+            header("Location:view_listagem_usuario.php");
+
             break;
 
-        case 'login_usuario':
+        case 'login':
             if(!isset($_POST['email']) || !isset($_POST['senha'])){
                 echo("Erro ao fazer Login");
                 exit();
@@ -61,7 +69,8 @@
             $senha = $_POST['senha'];
 
             $pessoaController = new PessoaController();
-            $pessoaController->loginUsuario($email, $senha);
+            $pessoaController-> loginUsuario($email, $senha);
+            
             break;
     
     }

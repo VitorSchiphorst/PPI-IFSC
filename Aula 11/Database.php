@@ -8,7 +8,7 @@
 
         public function getConnection() {
             $this-> user = "root";
-            $this-> password = "aluno";
+            $this-> password = "root";
             $this-> database = "crud";
             $this-> host = "localhost";
             $this-> connection = new PDO("mysql:host=$this->host;dbname=$this->database", $this->user, $this->password);
