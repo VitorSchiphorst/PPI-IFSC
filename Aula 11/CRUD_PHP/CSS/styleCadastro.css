@@ -1,0 +1,95 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    animation: animBackground 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #8b2e2e, #237040, #3e2a70, #8f882c);
+    background-size: 300% 300%;
+    height: 100vh;
+    width: 100%;
+}
+
+.cadastroBox {
+    width: 350px;
+    height: 450px;  
+    border-radius: 10%;  
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(206, 206, 206, 0.2);
+    text-align: center;
+}
+
+.inputCadastro {
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    color: lightgray;
+    font-size: 16px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-left: 2%;
+    width: 180px;
+}
+
+.inputCadastro:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.inputCadastro::placeholder {
+    color: lightgray;
+}
+
+.labelInput {
+    color: white;
+    font-size: 30px;
+    display: flex;
+    padding-left: 10%;
+    padding-top: 8%;
+}
+
+.btnCadastro {
+    border: 2px solid lightgray;
+    background-color: transparent;
+    color: white;
+    font-size: 22px;
+    border-radius: 25%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.btnCadastro:hover {
+    transition: 0.5s ease-in-out;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.linkLogin {
+    color: lightgray;
+    display: flex;
+    font-size: 16px;
+    margin-bottom: 5%;
+    margin-left: 37.5%;
+    margin-right: 37.5%;
+    margin-top: 2%;
+}
+
+@keyframes animBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

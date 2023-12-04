@@ -1,0 +1,127 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    animation: animBackground 15s ease infinite;
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(45deg, #8b2e2e, #237040, #3e2a70, #8f882c);
+    background-size: 300% 300%;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.listagemBox {
+    margin-top: 2%;
+    width: 1200px;
+    height: 100%;  
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(206, 206, 206, 0.2);
+    text-align: center;
+}
+
+.inputListagem {
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    color: lightgray;
+    font-size: 16px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-left: 2%;
+    text-align: center;
+    width: 180px;
+}
+
+.inputListagem:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.inputListagem::placeholder {
+    color: lightgray;
+}
+
+.labelInput {
+    color: white;
+    font-size: 20px;
+}
+
+.cent {
+    justify-content: center;
+}
+
+.btnSair {
+    border: 2px solid lightgray;
+    background-color: transparent;
+    color: white;
+    font-size: 22px;
+    border-radius: 25%;
+    display: flex;
+    width: 100px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25%;
+    text-decoration: none;
+}
+
+.btnSair:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.btnExcluir {
+    border: 2px solid lightgray;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    border-radius: 25%;
+    display: flex;
+    text-decoration: none;
+}
+
+.btnExcluir:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+    cursor: pointer;
+    color: lightcoral;
+    border: 2px solid lightcoral;
+}
+
+.btnSalvar {
+    border: 2px solid lightgray;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    border-radius: 25%;
+    display: flex;
+    text-decoration: none;
+}
+
+.btnSalvar:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+    cursor: pointer;
+    color: lightseagreen;
+    border: 2px solid lightseagreen;
+}
+
+@keyframes animBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
